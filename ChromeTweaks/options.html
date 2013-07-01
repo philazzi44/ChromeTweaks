@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="options.css">
+        <script src="jquery-2.0.2.min.js"></script>
+        <script src="jquery-ui-1.10.3.min.js"></script>
+        <script src="options.js"></script>
+        <title>Phil's Tweaks - Options</title>
+    </head>
+    <body>
+        <h1>Features</h1>
+        <hr>
+        <div>
+            <h2>Fogbugz</h2>
+            <p>
+                Alters the 'Change' icon to be <img id="changeIcon"> instead of the default <img id="bugIcon"> (which is the also used for bug tickets)
+            </p>
+            <div>
+                <label for="chkFogbugz">
+                    Enabled: <input id="chkFogbugz" type="checkbox">
+                </label>
+            </div>
+        </div>
+        
+        <div>
+            <h2>Grooveshark</h2>
+            <p>
+                Every few seconds, will check for the existance of the "Are you still there" popup, find the "Yes, I'm Here!" button and programatically click it. This allows for uninterrupted playback.
+            </p>
+            <div>
+                <label for="chkGrooveshark">
+                    Enabled: <input id="chkGrooveshark" type="checkbox">
+                </label>
+                <div id="divGroovesharkInterval">
+                    Interval (in seconds): <input id="nmbGroovesharkInterval" type="number" min="1" max="60"
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h2>Focus At Will</h2>
+            <p>
+                Every few seconds, will check for the existance of the "Use free for 100 minutes" popup, find the "Continue" button and programatically click it. This allows for uninterrupted playback.
+            </p>
+            <div>
+                <label for="chkFocus">
+                    Enabled: <input id="chkFocus" type="checkbox">
+                </label>
+                <div id="divFocusInterval">
+                    Interval (in seconds): <input id="nmbFocusInterval" type="number" min="1" max="60"
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h2>Jira</h2>
+            <div>
+                <p>
+                    The TempoBar, when using the Split View, gets hidden for some reason. This functionality will move it to a visible location on the page.
+                </p>
+                <label for="chkJiraTempoBar">
+                    TempoBar Enabled: <input id="chkJiraTempoBar" type="checkbox">
+                </label>
+            </div>
+            <div>
+                <p>
+                    Adds a Copy button that, when left-clicked, copies the Issue # to the clipboard and when right-clicked, copies the Url to the Issue.
+                </p>
+                <label for="chkJiraCopyButton">
+                    Copy Button Enabled: <input id="chkJiraCopyButton" type="checkbox">
+                </label>
+            </div>
+        </div>
+    </body>
+</html>
