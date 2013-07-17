@@ -47,7 +47,8 @@ $(
 	var loadFogbugz = function () {
 		getSettings(fogbugz.settingsKey, function (settings) {
 			if (!settings) {
-				fogbugz.enabledCheckbox.prop('checked', true)
+				fogbugz.enabledCheckbox.prop('checked', true);
+				saveFogbugz();
 			} else {
 				fogbugz.enabledCheckbox.prop('checked', (settings.enabled));
 			}
@@ -73,9 +74,10 @@ $(
 	var loadGrooveshark = function () {
 		getSettings(grooveshark.settingsKey, function (settings) {
 			if (!settings) {
-				grooveshark.enabledCheckbox.prop('checked', true)
+				grooveshark.enabledCheckbox.prop('checked', true);
 				grooveshark.intervalInput.val(grooveshark.defaultInterval);
 				grooveshark.intervalDiv.show();
+				saveGrooveshark();
 			} else {
 				grooveshark.enabledCheckbox.prop('checked', (settings.enabled));
 				if (settings.enabled) {
@@ -110,9 +112,10 @@ $(
 	var loadFocus = function () {
 		getSettings(focus.settingsKey, function (settings) {
 			if (!settings) {
-				focus.enabledCheckbox.prop('checked', true)
+				focus.enabledCheckbox.prop('checked', true);
 				focus.intervalInput.val(focus.defaultInterval);
 				focus.intervalDiv.show();
+				saveFocus();
 			} else {
 				focus.enabledCheckbox.prop('checked', (settings.enabled));
 				if (settings.enabled) {
@@ -138,8 +141,9 @@ $(
 	var loadJira = function () {
 		getSettings(jira.settingsKey, function (settings) {
 			if (!settings) {
-				jira.tempoBarEnabledCheckbox.prop('checked', true)
-                jira.copyButtonEnabledCheckbox.prop('checked', true)
+				jira.tempoBarEnabledCheckbox.prop('checked', true);
+                jira.copyButtonEnabledCheckbox.prop('checked', true);
+                saveJira();
 			} else {
 				jira.tempoBarEnabledCheckbox.prop('checked', (settings.tempoBarEnabled));
                 jira.copyButtonEnabledCheckbox.prop('checked', (settings.copyButtonEnabled));
